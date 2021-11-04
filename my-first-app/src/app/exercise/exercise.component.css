@@ -1,0 +1,11 @@
+button {
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    width: 18rem;
+    height: 4rem;
+}
+
+.white-text {
+    color: white;
+}

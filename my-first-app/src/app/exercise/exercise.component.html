@@ -1,0 +1,6 @@
+<h3>Exercise 3</h3>
+<button (click)="onToggleDetails()">Display Details</button>
+<p *ngIf="showSecret">Secret password: tuna</p>
+<div *ngFor="let logItem of log"
+[ngStyle]="{backgroundColor: logItem >= 5 ? 'blue' : 'yellow'}"
+[ngClass]="{'white-text': logItem >=5}"> {{ logItem }}</div>
