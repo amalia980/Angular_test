@@ -11,11 +11,12 @@ export class ExerciseComponent implements OnInit {
 
   onToggleDetails() {
     this.showSecret = !this.showSecret;
-    //this.log.push(this.log.length + 1);
+    //this.log.push(this.log.length + 1); WILL ONLY PRINT OUT NUMBERS FROM STARTING WITH 1
     this.log.push(new Date());
+    //THIS LOGS OUT THE CURRENT DATE
   }
 
-  constructor() { 
+  constructor() {
 
   }
 

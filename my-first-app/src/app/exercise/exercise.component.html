@@ -2,6 +2,17 @@
 <button (click)="onToggleDetails()">Display Details</button>
 <p *ngIf="showSecret">Secret password: tuna</p>
 
+<!-- JUST LOGGING OUT NUMBERS WITH EACH CLICK OF BTN FROM THE ARRAY
+  <div *ngFor="letItem of log">{{ logItem }}</div>
+-->
+
+<!-- CHECK IF LOGITEM IS GREATER OR EQUAL TO 5. IF TRUE THE BACKGROUND COLOR WILL BE BLUE, OTHER WISE PINK. SO NUMBERS 1-5 ARE BLUE, AFTER 5 THE BACKGROUND IS PINK
+  <div *ngFor="let logItem of log"
+        [ngStyle]="{backgroundColor: logItem >= 5 ? 'blue" : 'pink'}">
+    {{ logItem }}</div>
+-->
+
+<!--SAME LOGIC AS ON TOP, BUT WE ALSO ADD A WHITE TEXT FOR THE BLUE BACKGROUND. "WHITE-TEXT" COMES FROM CSS FILE. WHY THE TEXT CHANGES ON ONLY BLUE IS BECAUSE ITS THE SAME CONDITION, IT WOULD BE THE OTHER WAY IF WE STATED: I <= 5. THEN NUMBERS FROM 1-5 WILL HAVE A WHITE TEXT-->
 <div *ngFor="let logItem of log; let i = index"
-[ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'yellow'}"
-[ngClass]="{'white-text': i >=4}"> {{ logItem }}</div>
+[ngStyle]="{backgroundColor: i >= 5 ? 'blue' : 'yellow'}"
+[ngClass]="{'white-text': i >=5}"> {{ logItem }}</div>
