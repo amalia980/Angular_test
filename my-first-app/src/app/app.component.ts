@@ -7,6 +7,9 @@ import { Component, Injectable } from '@angular/core';
   //can add more styl files here with a comma
 })
 export class AppComponent {
+
+  //GAME CONTROL
+
  oddNumbers: number[] = [];//creating array to print out each odd number on for loop. :number[], meaning this property should hold an array of type numbers
 
  evenNumbers: number[] = [];

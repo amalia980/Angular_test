@@ -13,6 +13,7 @@ export class GameControlComponent implements OnInit {
 
   number = 1;//emit an incrementing number that starts on 0
 
+  //number = 0;
 
   constructor() { }
 
@@ -21,7 +22,7 @@ export class GameControlComponent implements OnInit {
 
   startGame() {
     this.interval = setInterval(() => {
-      this.myInterval.emit(this.number);
+      this.myInterval.emit(this.number);//(this.number + 1);
       this.number++;
     },1000);//emit an event each second
   }
