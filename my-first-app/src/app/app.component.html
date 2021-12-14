@@ -11,6 +11,16 @@
       <app-servers></app-servers>
       <app-exercise></app-exercise>
       <hr>
+      <app-game-control (myInterval)="onInterval($event)"></app-game-control>
+      <div class="game-wrapper">
+        <div class="game-boxes">
+          <app-odd *ngFor=" let oddNumber of oddNumbers" [myNumber]="oddNumber"></app-odd>
+      </div>
+      <div class="game-boxes">
+          <app-even *ngFor="let evenNumber of evenNumbers" [myNumber]="evenNumber"></app-even>
+      </div>
+      </div>
+      <hr>
 
       <!--form-->
       <app-form></app-form>

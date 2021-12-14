@@ -12,7 +12,14 @@
     {{ logItem }}</div>
 -->
 
-<!--SAME LOGIC AS ON TOP, BUT WE ALSO ADD A WHITE TEXT FOR THE BLUE BACKGROUND. "WHITE-TEXT" COMES FROM CSS FILE. WHY THE TEXT CHANGES ON ONLY BLUE IS BECAUSE ITS THE SAME CONDITION, IT WOULD BE THE OTHER WAY IF WE STATED: I <= 5. THEN NUMBERS FROM 1-5 WILL HAVE A WHITE TEXT-->
+<!--SAME LOGIC AS ON TOP, BUT WE ALSO ADD A WHITE TEXT FOR THE BLUE BACKGROUND. "WHITE-TEXT" COMES FROM CSS FILE. WHY THE TEXT CHANGES ON ONLY BLUE IS BECAUSE ITS THE SAME CONDITION, IT WOULD BE THE OTHER WAY IF WE STATED: I <= 5. THEN NUMBERS FROM 1-5 WILL HAVE A WHITE TEXT
+<div *ngFor="let logItem of log"
+[ngStyle]="{backgroundColor: i >= 5 ? 'blue' : 'yellow'}"
+[ngClass]="{'white-text': i >=5}"> {{ logItem }}</div>
+-->
+
+
+<!--THIS LOGS OUT THE CURRENT DATE OF EACH CLICK, EXTRACT EXTRA INFO WITH SEMI-COLON AFTER NGFOR-->
 <div *ngFor="let logItem of log; let i = index"
 [ngStyle]="{backgroundColor: i >= 5 ? 'blue' : 'yellow'}"
 [ngClass]="{'white-text': i >=5}"> {{ logItem }}</div>

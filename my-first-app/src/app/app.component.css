@@ -1,3 +1,12 @@
 h3 {
     color: purple;
 }
+
+.game-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-boxes {
+  margin: 1rem;
+}
